@@ -18,12 +18,14 @@
 package com.universalvideoviewsample;
 
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.universalvideoview.UniversalMediaController;
 import com.universalvideoview.UniversalVideoView;
@@ -149,7 +151,8 @@ public class MainActivity extends AppCompatActivity implements UniversalVideoVie
     }
 
     private void switchTitleBar(boolean show) {
-        android.support.v7.app.ActionBar supportActionBar = getSupportActionBar();
+
+       ActionBar supportActionBar = getSupportActionBar();
         if (supportActionBar != null) {
             if (show) {
                 supportActionBar.show();
